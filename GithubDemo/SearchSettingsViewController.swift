@@ -12,6 +12,7 @@ class SearchSettingsViewController: UIViewController {
 
     @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var countLabel: UILabel!
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         self.settings.minStars = Int(self.slider.value)
         self.delegate?.didSaveSettings(settings: self.settings)
@@ -26,6 +27,17 @@ class SearchSettingsViewController: UIViewController {
         
         
     }
+    
+    @IBAction func sliderChange(_ sender: Any) {
+        countLabel.text = "\(Int(slider.value))"
+        settings.minStars = Int(slider.value)
+    }
+    @IBAction func sliderChanged(_ sender: Any) {
+        countLabel.text = "\(Int(slider.value))"
+        settings.minStars = Int(slider.value)
+    }
+    
+    
     var settings = GithubRepoSearchSettings()
     weak var delegate : SettingsPresentingViewControllerDelegate?
     
@@ -40,6 +52,11 @@ class SearchSettingsViewController: UIViewController {
         slider.minimumValue = 0
         slider.maximumValue = 20000
         // Dispose of any resources that can be recreated.
+        
+        slider.value = Float(settings.minStars)
+        countLabel.text = "\(Int(settings.minStars))"
+        
+        
     }
     
 

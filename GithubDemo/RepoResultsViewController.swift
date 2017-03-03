@@ -96,10 +96,16 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! UINavigationController
-        let dest = vc.topViewController as! SearchSettingsViewController
-        dest.settings = searchSettings // ... Search Settings ...
-        dest.delegate = self
+        if (segue.destination.childViewControllers.first as? SearchSettingsViewController) != nil {
+            //do something with b
+            let navController = segue.destination as! UINavigationController
+            let vc = navController.topViewController as! SearchSettingsViewController
+            vc.settings = searchSettings // ... Search Settings ...
+            vc.delegate = self
+
+        }
+        
+        
     }
     
     
