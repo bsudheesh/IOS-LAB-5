@@ -18,7 +18,17 @@ protocol SettingsPresentingViewControllerDelegate: class {
 
 
 // Main ViewController
-class RepoResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class RepoResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SettingsPresentingViewControllerDelegate{
+    internal func didCancelSettings() {
+        //empty
+    }
+
+    internal func didSaveSettings(settings: GithubRepoSearchSettings) {
+        searchSettings = settings
+        doSearch()
+        self.dismiss(animated: true, completion: nil)
+    }
+
 
 
     @IBOutlet weak var tableView: UITableView!
@@ -94,7 +104,7 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
     
     
     
-    }
+}
     
 
     

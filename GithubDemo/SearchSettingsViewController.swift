@@ -13,13 +13,16 @@ class SearchSettingsViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        
+        self.settings.minStars = Int(self.slider.value)
+        self.delegate?.didSaveSettings(settings: self.settings)
+        self.delegate?.didSaveSettings(settings: settings)
         
     }
     
     
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.delegate?.didCancelSettings()
         
         
     }

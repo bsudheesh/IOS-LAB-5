@@ -97,7 +97,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="x5q-EH-pP8">
-                        <barButtonItem key="leftBarButtonItem" title="Setting" id="lKc-zr-F8f"/>
+                        <barButtonItem key="leftBarButtonItem" title="Setting" id="lKc-zr-F8f">
+                            <connections>
+                                <segue destination="jTW-Sr-Jc5" kind="modal" id="Ur4-7x-884"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="O8m-gz-8MD" id="1TH-Dc-5U1"/>
@@ -177,24 +181,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dru-y2-L7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-557"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3uj-m8-fIE">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Sf-sD-ZAJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C24-TJ-boj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jTW-Sr-Jc5" kind="relationship" relationship="rootViewController" id="ihF-qQ-sQn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="76h-kv-SsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1632.8" y="-558.17091454272872"/>
         </scene>
     </scenes>
     <resources>
