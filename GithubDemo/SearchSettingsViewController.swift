@@ -26,15 +26,16 @@ class SearchSettingsViewController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         self.settings.minStars = Int(self.slider.value)
         self.delegate?.didSaveSettings(settings: self.settings)
-        self.delegate?.didSaveSettings(settings: settings)
+        self.dismiss(animated: true, completion: nil)
         
     }
-    
+     
     
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         print("Cancel button pressed")
         self.delegate?.didCancelSettings()
+        self.dismiss(animated: true, completion: nil)
     
         
         
@@ -53,7 +54,7 @@ class SearchSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         slider.minimumValue = 0
-        slider.maximumValue = 200000
+        slider.maximumValue = 20000
         // Dispose of any resources that can be recreated.
         
         slider.value = Float(settings.minStars)

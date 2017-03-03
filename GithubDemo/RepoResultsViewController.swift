@@ -53,23 +53,19 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         doSearch()
     }
 
-    // Perform the search.
     fileprivate func doSearch() {
-
+        
         MBProgressHUD.showAdded(to: self.view, animated: true)
-
+        
         // Perform request to GitHub API to get the list of repositories
         GithubRepo.fetchRepos(searchSettings, successCallback: { (newRepos) -> Void in
-
-            // Print the returned repositories to the output window
-            for repo in newRepos {
-                print(repo)
-            }
+            
             self.repos = newRepos
-            self.tableView.reloadData()
+            self.tableView.reloadData();
+            
             MBProgressHUD.hide(for: self.view, animated: true)
-            }, error: { (error) -> Void in
-                print(error)
+        }, error: { (error) -> Void in
+            print(error!)
         })
     }
     
