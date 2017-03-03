@@ -10,10 +10,7 @@ import UIKit
 import MBProgressHUD
 
 
-protocol SettingsPresentingViewControllerDelegate: class {
-    func didSaveSettings(settings: GithubRepoSearchSettings)
-    func didCancelSettings()
-}
+
 
 
 

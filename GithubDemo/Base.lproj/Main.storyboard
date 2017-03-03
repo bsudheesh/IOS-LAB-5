@@ -99,7 +99,7 @@
                     <navigationItem key="navigationItem" id="x5q-EH-pP8">
                         <barButtonItem key="leftBarButtonItem" title="Setting" id="lKc-zr-F8f">
                             <connections>
-                                <segue destination="sjE-ua-WgP" kind="modal" id="Ur4-7x-884"/>
+                                <segue destination="ccb-oJ-Fbo" kind="modal" id="DZF-gC-scH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -137,6 +137,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4fi-Fp-IWl">
                                         <rect key="frame" x="89" y="14" width="210" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="slider:" destination="jTW-Sr-Jc5" eventType="valueChanged" id="UEj-GO-Kbf"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRU-nV-lhX">
                                         <rect key="frame" x="314" y="19" width="42" height="21"/>
@@ -170,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFo-gG-mJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3511.1999999999998" y="-558.17091454272872"/>
+            <point key="canvasLocation" x="3079" y="-558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FpP-oR-azb">
@@ -191,22 +194,22 @@
             <point key="canvasLocation" x="132" y="-557"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Ged-57-Vza">
+        <scene sceneID="31y-Rj-sb9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sjE-ua-WgP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ccb-oJ-Fbo" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lpe-qk-jW5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sMC-vG-qk5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="jTW-Sr-Jc5" kind="relationship" relationship="rootViewController" id="fg6-gT-zHP"/>
+                        <segue destination="jTW-Sr-Jc5" kind="relationship" relationship="rootViewController" id="o3c-tf-2rp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Abi-fo-y34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqD-6Q-wHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2572" y="-558.17091454272872"/>
+            <point key="canvasLocation" x="2087" y="-557"/>
         </scene>
     </scenes>
     <resources>
